@@ -3,11 +3,11 @@ print("-" * 10, "Belanja Online", "-" * 10, "\n")
 pembeli = str(input("Masukkan nama anda: "))
 
 print("""Produk yang kami sediakan:
-1. Kipas Angin = Rp. 1000000
-2. TV = Rp. 2000000
-3. Mesin Cuci = Rp. 3000000
-4. AC = Rp. 4000000
-5. Kulkas = Rp. 5000000""")
+1. Kipas Angin\t= Rp. 1000000
+2. TV\t\t= Rp. 2000000
+3. Mesin Cuci\t= Rp. 3000000
+4. AC\t\t= Rp. 4000000
+5. Kulkas\t= Rp. 5000000""")
 
 produk = int(input("Pilih no. produk yang ingin dibeli: "))
 
@@ -79,4 +79,4 @@ Harga Kotor\t: Rp. %i
 Diskon\t\t: Rp. %i
 PPN 10%%\t\t: Rp. %i
 """ % (pembeli, namaProduk, harga, jumlahBarang, hargaKotor, diskon, ppn))
-print("-" * 10, "Terimakasih sudah berbelanja disini", "-" * 10)
+print("-" * 10, "Terimakasih sudah berbelanja di Belanja Online", "-" * 10)

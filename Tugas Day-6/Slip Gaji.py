@@ -4,7 +4,7 @@ agama1 = "Islam"
 agama2 = "Kristen"
 
 pegawai = ["Ahmad", "Alex"]
-gajiPokok = [6000000, 6000000]
+gajiPokok = [4000000, 6000000]
 tunjanganJabatan = [number * 0.20 for number in gajiPokok]
 tunjanganKeluarga1 = gajiPokok
 

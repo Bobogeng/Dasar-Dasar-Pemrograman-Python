@@ -17,29 +17,38 @@ while True:
         harga = 1000000
         jumlahBarang = int(input("Masukkan jumlah barang yang ingin dibeli: "))
         totalPembelian = harga * jumlahBarang
-        diskon = 0
+        if(jumlahBarang >= 1):
+            diskon = totalPembelian * 0.05
+        else:
+            diskon = 0
         break
     elif(produk == 2):
         namaProduk = "TV"
         harga = 2000000
         jumlahBarang = int(input("Masukkan jumlah barang yang ingin dibeli: "))
         totalPembelian = harga * jumlahBarang
-        diskon = 0
+        if(jumlahBarang >= 1):
+            diskon = totalPembelian * 0.05
+        else:
+            diskon = 0
         break
     elif(produk == 3):
         namaProduk = "Mesin Cuci"
         harga = 3000000
         jumlahBarang = int(input("Masukkan jumlah barang yang ingin dibeli: "))
         totalPembelian = harga * jumlahBarang
-        diskon = 0
+        if(jumlahBarang >= 1):
+            diskon = totalPembelian * 0.05
+        else:
+            diskon = 0
         break
     elif(produk == 4):
         namaProduk = "AC"
         harga = 4000000
         jumlahBarang = int(input("Masukkan jumlah barang yang ingin dibeli: "))
         totalPembelian = harga * jumlahBarang
-        if(jumlahBarang >= 3):
-            diskon = 0.10
+        if(jumlahBarang >= 5):
+            diskon = totalPembelian * 0.10
         else:
             diskon = 0
         break
@@ -49,7 +58,7 @@ while True:
         jumlahBarang = int(input("Masukkan jumlah barang yang ingin dibeli: "))
         totalPembelian = harga * jumlahBarang
         if(jumlahBarang >= 5):
-            diskon = 0.20
+            diskon = totalPembelian * 0.20
         else:
             diskon = 0
         break
@@ -58,20 +67,17 @@ while True:
         produk = int(input("Pilih no. produk yang ingin dibeli: "))
         continue
 
-if(jumlahBarang > 1):
-    totalDiskon = totalPembelian * (0.05 + diskon)
-else:
-    totalDiskon = 0
-hargaKotor = totalPembelian + totalDiskon
-ppn = (hargaKotor - totalDiskon) * 0.10
-hargaBersih = (hargaKotor - totalDiskon) + ppn
+hargaKotor = totalPembelian
+ppn = (hargaKotor - diskon) * 0.10
+hargaBersih = (hargaKotor - diskon) + ppn
 
-print("""Nama Anda\t: %s"
+print("""Nama Anda\t: %s
 Produk Pilihan\t: %s
 Harga Produk\t: Rp. %s
 Jumlah Beli\t: %ipcs
 Harga Kotor\t: Rp. %i
 Diskon\t\t: Rp. %i
 PPN 10%%\t\t: Rp. %i
-""" % (pembeli, namaProduk, harga, jumlahBarang, hargaKotor, totalDiskon, ppn))
+Harga Bersih\t: Rp. %i
+""" % (pembeli, namaProduk, harga, jumlahBarang, hargaKotor, diskon, ppn, hargaBersih))
 print("-" * 10, "Terimakasih sudah berbelanja disini", "-" * 10)

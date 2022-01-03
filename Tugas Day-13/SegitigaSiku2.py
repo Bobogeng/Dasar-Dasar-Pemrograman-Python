@@ -11,7 +11,7 @@ class SegitigaSiku2:
     def keliling(self):
 
         print("Keliling Segitiga Siku-siku:", "%.2f" %
-              (self.a * self.t * self.m))
+              (self.a + self.t + self.m))
 
     def luas(self):
         print("Luas Segitiga Siku-siku:", 0.5 * self.a * self.t, "\n")
